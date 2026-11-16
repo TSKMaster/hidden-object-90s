@@ -47,6 +47,14 @@ class SearchScene extends Phaser.Scene {
       image.on('pointerdown', () => {
         if (this.found.has(placement.id)) return;
         this.found.add(placement.id);
+        image.disableInteractive();
+        this.tweens.add({
+          targets: image,
+          alpha: 0,
+          duration: 250,
+          ease: 'Sine.Out',
+          onComplete: () => image.setVisible(false),
+        });
         row.classList.add('found');
         mark.textContent = '✓';
         mark.setAttribute('aria-label', 'Найден');
