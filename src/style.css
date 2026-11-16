@@ -1,0 +1,26 @@
+:root { font-family: Arial, sans-serif; color: #efe9d8; background: #282923; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) clamp(180px, 25vw, 280px); height: 100vh; height: 100dvh; }
+#game { position: relative; min-width: 0; min-height: 0; overflow: hidden; }
+canvas { display: block; touch-action: none; }
+aside { padding: 20px; background: #34372e; overflow-y: auto; }
+h1 { font-family: Georgia, serif; font-size: 27px; line-height: 1.1; margin: 0; font-weight: normal; }
+h1 span { color: #e8bf73; }
+header p { color: #c6c8b8; font-size: 13px; }
+#progress { color: #e8bf73; font-size: 14px; }
+ul { list-style: none; padding: 0; margin: 12px 0; }
+li { display: grid; grid-template-columns: 32px 1fr 18px; align-items: center; gap: 8px; min-height: 35px; font-size: 14px; border-bottom: 1px solid #ffffff12; transition: color 150ms; }
+li img { width: 30px; height: 30px; object-fit: contain; }
+.mark { color: #aaa; }
+.found { color: #c9d3a5; }
+.found .mark { color: #e8bf73; }
+.found > span:first-of-type { text-decoration: line-through; }
+#result { min-height: 18px; color: #e8bf73; font-size: 14px; }
+button { width: 100%; min-height: 44px; border: 1px solid #e8bf73; background: transparent; color: #efe9d8; font: inherit; cursor: pointer; transition: background 150ms; }
+button:hover { background: #e8bf7320; }
+button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.orientation { display: none; }
+@media (max-height: 500px) { aside { padding: 10px 14px; } h1 { font-size: 21px; } header p { margin: 6px 0; } #progress { margin: 8px 0; } li { min-height: 30px; } ul { margin: 6px 0; } #result { margin: 8px 0; } }
+@media (orientation: portrait) { .orientation { position: fixed; inset: 0; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px; text-align: center; background: #282923; } .orientation strong { font: 28px Georgia, serif; } .orientation p { max-width: 320px; line-height: 1.6; color: #c6c8b8; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
