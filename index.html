@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hidden Object 90s</title>
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <main class="layout">
+      <section id="game" aria-label="Игровая локация: найдите предметы нажатием"></section>
+      <aside>
+        <header><h1>Hidden Object <span>90s</span></h1><p>Найдите все предметы</p></header>
+        <p id="progress" role="status" aria-live="polite"></p>
+        <ul id="items" aria-label="Искомые предметы"></ul>
+        <p id="result" role="status" aria-live="polite"></p>
+        <button id="restart" type="button">Начать заново</button>
+      </aside>
+    </main>
+    <div class="orientation" role="status"><strong>Поверните устройство</strong><p>Для поиска предметов используйте горизонтальную ориентацию экрана.</p></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
